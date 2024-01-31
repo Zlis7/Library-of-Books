@@ -1,0 +1,15 @@
+div{
+    position: absolute;
+}
+
+body{ 
+    background-color: blue;
+}
+
+.grger{
+    color:red;
+}
+
+.test{
+    font-size: 15px;
+}

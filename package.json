@@ -1,0 +1,31 @@
+{
+  "name": "library-of-books",
+  "version": "1.0.0",
+  "description": "library of books for easy use",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "live-server",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zlis7/Library-of-Books.git"
+  },
+  "keywords": [
+    "library",
+    "books"
+  ],
+  "author": "Kalmykov Denis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zlis7/Library-of-Books/issues"
+  },
+  "homepage": "https://github.com/Zlis7/Library-of-Books#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "eslint": "^8.56.0",
+    "rollup": "^4.9.6",
+    "rollup-plugin-import-css": "^3.4.0"
+  }
+}
