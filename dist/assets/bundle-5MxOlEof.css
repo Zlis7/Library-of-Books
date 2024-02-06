@@ -1,0 +1,153 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menuItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.menuItem:visited{
+    color: var(--black);
+}
+
+.favoritesCounter{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 28px;
+    border: 1px solid var(--black);
+    border-radius: 50%;
+    padding: 0 10px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cardImage{
+    background: #B8B8B8;
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: start;
+    height: 180px;
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+    background: var(--black);
+    color: var(--white);
+    min-height: 150px;
+    padding: 10px;
+}
+
+.cardTag{
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 15px;
+    margin-bottom: 3px;
+}
+
+.cardName{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 100%;
+    margin-bottom: 8px;
+}
+
+.cardAuthor{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.cardFooter{
+    margin-top: auto;
+    display: flex;
+}
+
+.buttonAdd{
+    border-radius: 6px;
+    width:36px;
+    height: 32px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid var(--white);
+    cursor: pointer;
+}
+
+.buttonActive{
+    background: var(--white);
+}
+.cardListLoader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 30px;
+}
+
+.cardGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.search{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.searchWrapper{
+    position: relative;
+    flex: 1;
+    display: flex;
+}
+
+.searchWrapper img{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+}
+
+.searchWrapper input{
+    background: #DEDEDE;
+    border: none;
+    border-radius: 5px;
+    color: #252525;
+    padding: 15px 30px 15px 50px;
+    flex: 1;
+}
+
+.searchWrapper input::placeholder{
+    color: #494949;
+}
+
+.searchButton{
+    border: none;
+    background: var(--black);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
