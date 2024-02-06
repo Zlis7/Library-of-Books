@@ -1,0 +1,65 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cardImage{
+    background: #B8B8B8;
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: start;
+    height: 180px;
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+    background: var(--black);
+    color: var(--white);
+    min-height: 150px;
+    padding: 10px;
+}
+
+.cardTag{
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 15px;
+    margin-bottom: 3px;
+}
+
+.cardName{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 100%;
+    margin-bottom: 8px;
+}
+
+.cardAuthor{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.cardFooter{
+    margin-top: auto;
+    display: flex;
+}
+
+.buttonAdd{
+    border-radius: 6px;
+    width:36px;
+    height: 32px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid var(--white);
+    cursor: pointer;
+}
+
+.buttonActive{
+    background: var(--white);
+}

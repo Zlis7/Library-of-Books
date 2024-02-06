@@ -1,0 +1,41 @@
+.search{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.searchWrapper{
+    position: relative;
+    flex: 1;
+    display: flex;
+}
+
+.searchWrapper img{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+}
+
+.searchWrapper input{
+    background: #DEDEDE;
+    border: none;
+    border-radius: 5px;
+    color: #252525;
+    padding: 15px 30px 15px 50px;
+    flex: 1;
+}
+
+.searchWrapper input::placeholder{
+    color: #494949;
+}
+
+.searchButton{
+    border: none;
+    background: var(--black);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
