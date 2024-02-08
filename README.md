@@ -1,2 +1,1 @@
-# Library-of-Books
-Контрольная работа по курсу
+#  https://zlis7.github.io/Library-of-Books/
