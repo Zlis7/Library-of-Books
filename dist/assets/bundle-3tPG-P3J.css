@@ -151,3 +151,21 @@
     justify-content: center;
     cursor: pointer;
 }
+.offset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 50%;
+}
+
+.offsetLeft , .offsetRight{
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--black);
+    cursor: pointer;
+}

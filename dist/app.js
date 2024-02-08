@@ -1248,11 +1248,6 @@
             this.setTitle('Мои книги');
         }
 
-        saveFavoritesInStorаge(){
-            console.log(this.appState.favorites[0].key);
-        }
-
-
         destroy(){
             onChange.unsubscribe(this.appState);
         }
@@ -1260,7 +1255,6 @@
         appStateHook(path){
             if(path === 'favorites'){
                 this.render();
-                this.saveFavoritesInStorаge();
             }
         }
 
@@ -1319,6 +1313,41 @@
         }
     }
 
+    class Offset extends DivComponent{
+        constructor(state){
+            super();
+            this.state = state;
+        }
+
+        render(){
+
+            if (this.state.list.length <= 0 || this.state.loading === true){
+                return " ";
+            }
+
+            this.element.classList.add('offset');
+            this.element.innerHTML = `
+            <button class='offsetLeft'><-- Предыдущая страница</button>
+            <button class='offsetRight'>Следующая страница --></button>
+        `;
+
+            this.element.querySelector('.offsetLeft').addEventListener('click', ()=>{
+                
+                if(this.state.offset - 100 >= 0){
+                    this.state.offset -= 100;
+                }
+            });
+
+            this.element.querySelector('.offsetRight').addEventListener('click', ()=>{
+                if(this.state.numFound - this.state.offset >= 100){
+                    this.state.offset += 100;
+                }
+            });
+
+            return this.element;
+        }
+    }
+
     class MainView extends AbstractView{
         
         state ={
@@ -1349,7 +1378,9 @@
         }
 
         async stateHook(path){
-            if(path === 'searchQuery'){
+
+            if(path === 'searchQuery' || path === 'offset'){
+                if(path === 'searchQuery') {this.state.offset = 0;}
                 this.state.loading = true;
                 const data = await this.loadList(this.state.searchQuery, this.state.offset);
                 this.state.loading = false;
@@ -1384,7 +1415,7 @@
             main.prepend(new Search(this.state).render());
             main.prepend(new Header(this.appState).render());
             main.append(new CardList(this.appState,this.state).render());
-            
+            main.append(new Offset(this.state).render());
             this.app.innerHTML = '';
             this.app.append(main);
         }

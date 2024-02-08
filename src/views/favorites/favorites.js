@@ -12,11 +12,6 @@ export class FavoritesView extends AbstractView{
         this.setTitle('Мои книги');
     }
 
-    saveFavoritesInStorаge(){
-        console.log(this.appState.favorites[0].key);
-    }
-
-
     destroy(){
         onChange.unsubscribe(this.appState);
     }
@@ -24,7 +19,6 @@ export class FavoritesView extends AbstractView{
     appStateHook(path){
         if(path === 'favorites'){
             this.render();
-            this.saveFavoritesInStorаge();
         }
     }
 
