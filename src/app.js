@@ -10,7 +10,7 @@ class App {
 
     appState = {
         favorites: []
-    } 
+    }
 
     constructor(){
         window.addEventListener('hashchange', this.route.bind(this));

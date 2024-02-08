@@ -12,6 +12,11 @@ export class FavoritesView extends AbstractView{
         this.setTitle('Мои книги');
     }
 
+    saveFavoritesInStorаge(){
+        console.log(this.appState.favorites[0].key);
+    }
+
+
     destroy(){
         onChange.unsubscribe(this.appState);
     }
@@ -19,6 +24,7 @@ export class FavoritesView extends AbstractView{
     appStateHook(path){
         if(path === 'favorites'){
             this.render();
+            this.saveFavoritesInStorаge();
         }
     }
 
@@ -28,7 +34,7 @@ export class FavoritesView extends AbstractView{
         main.innerHTML = `
         <h1>Избранные книги</h1>`;
 
-        main.append(new Header(this.appState).render());
+        main.prepend(new Header(this.appState).render());
         main.append(new CardList(this.appState, {list: this.appState.favorites}).render());
         
         this.app.innerHTML = '';
